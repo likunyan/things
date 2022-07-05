@@ -60,7 +60,7 @@ function Photo() {
             lazy
             src={photo.path}
             width="100px"
-            height="auto"
+            height="100px"
             fit="cover"
             placeholder={<Skeleton.Title style={{ width: 100, height: 100 }} />}
             style={{ borderRadius: 4 }}
