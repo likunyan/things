@@ -1,4 +1,8 @@
 @import "reset.css";
+html,
+body {
+  height: -webkit-fill-available;
+}
 body {
   margin: 0 0;
 }
