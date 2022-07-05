@@ -47,7 +47,7 @@ function Thing() {
   }, []);
 
   return (
-    <>
+    <div style={{ marginTop: 50 }}>
       <Search
         style={{
           position: "fixed",
@@ -107,7 +107,7 @@ function Thing() {
       <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
         <InfiniteScrollContent hasMore={hasMore} />
       </InfiniteScroll>
-    </>
+    </div>
   );
 }
 
