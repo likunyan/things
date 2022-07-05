@@ -18,7 +18,8 @@ function TagList() {
         height: "100%",
         display: "flex",
         flexWrap: "wrap",
-        justifyContent: "flex-start",
+        justifyContent: "center",
+        alignItems: "center",
         alignContent: "center",
       }}
     >

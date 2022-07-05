@@ -46,15 +46,15 @@ function Photo() {
   }
 
   return (
-    <div style={{ margin: "12px 12px" }}>
+    <div style={{ margin: "8px 8px" }}>
       <Grid columns={3} gap={8}>
         {photos.map((photo) => (
-          <Grid.Item key={photo.id}>
+          <Grid.Item key={photo.id} style={{ margin: "0 auto" }}>
             <Image
               lazy
               src={photo.path}
-              width={100}
-              height={100}
+              width="100%"
+              height="100%"
               fit="cover"
               placeholder={
                 <Skeleton.Title style={{ width: 100, height: 100 }} />
