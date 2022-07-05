@@ -47,7 +47,7 @@ function Thing() {
   }, []);
 
   return (
-    <>
+    <div>
       <Search
         style={{
           position: "fixed",
@@ -59,7 +59,7 @@ function Thing() {
           padding: "10px 10px",
         }}
       />
-      <Collapse accordion style={{ flexGrow: 1 }}>
+      <Collapse accordion style={{ flexGrow: 1, marginTop: 50 }}>
         {things.map((thing) => (
           <Collapse.Panel
             key={thing.id}
@@ -107,7 +107,7 @@ function Thing() {
       <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
         <InfiniteScrollContent hasMore={hasMore} />
       </InfiniteScroll>
-    </>
+    </div>
   );
 }
 
