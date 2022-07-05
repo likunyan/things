@@ -1,4 +1,11 @@
-import { DotLoading, Grid, Image, InfiniteScroll, Skeleton } from "antd-mobile";
+import {
+  DotLoading,
+  Grid,
+  Image,
+  InfiniteScroll,
+  Skeleton,
+  Space,
+} from "antd-mobile";
 import React, { useState } from "react";
 
 import axios from "./instance/axios";
@@ -47,23 +54,20 @@ function Photo() {
 
   return (
     <div style={{ margin: "8px 8px" }}>
-      <Grid columns={3} gap={8}>
+      <Space wrap>
         {photos.map((photo) => (
-          <Grid.Item key={photo.id}>
-            <Image
-              lazy
-              src={photo.path}
-              width="100%"
-              height="100%"
-              fit="cover"
-              placeholder={
-                <Skeleton.Title style={{ width: 100, height: 100 }} />
-              }
-              style={{ borderRadius: 4 }}
-            />
-          </Grid.Item>
+          <Image
+            lazy
+            src={photo.path}
+            width="100px"
+            height="auto"
+            fit="cover"
+            placeholder={<Skeleton.Title style={{ width: 100, height: 100 }} />}
+            style={{ borderRadius: 4 }}
+            key={photo.id}
+          />
         ))}
-      </Grid>
+      </Space>
 
       <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
         <InfiniteScrollContent hasMore={hasMore} />
