@@ -49,7 +49,7 @@ function Photo() {
     <div style={{ margin: "8px 8px" }}>
       <Grid columns={3} gap={8}>
         {photos.map((photo) => (
-          <Grid.Item key={photo.id} style={{ margin: "0 auto" }}>
+          <Grid.Item key={photo.id}>
             <Image
               lazy
               src={photo.path}
