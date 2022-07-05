@@ -1,0 +1,56 @@
+@import "reset.css";
+
+body {
+  margin: 0 0;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+
+  .input {
+    flex: auto;
+  }
+
+  .eye {
+    flex: none;
+    margin-left: 8px;
+    padding: 4px;
+    cursor: pointer;
+
+    svg {
+      display: block;
+      font-size: var(--adm-font-size-7);
+    }
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+.top {
+  flex: 0;
+  border-bottom: solid 1px var(--adm-color-border);
+}
+
+.body {
+  overflow: scroll;
+  height: calc(100% - 50px);
+}
+
+.bottom {
+  flex: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: solid 1px var(--adm-color-border);
+  //background-color: white;
+}
+
+.tag {
+  margin: 0 2px;
+}
